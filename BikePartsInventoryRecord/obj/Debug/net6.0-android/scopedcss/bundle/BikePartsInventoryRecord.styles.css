@@ -1,0 +1,203 @@
+/* /Pages/ChangePassword.razor.rz.scp.css */
+
+.form-body[b-kaq5ivk9pl] {
+    display: flex;
+    align-items: start;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.form-container[b-kaq5ivk9pl] {
+    width: 100%;
+    max-width: 330px;
+    padding: 50px;
+    margin: auto;
+}
+
+.form-container .form-floating:focus-within[b-kaq5ivk9pl] {
+    z-index: 2;
+}
+
+.form-login .current-password[b-kaq5ivk9pl] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-login .new-password[b-kaq5ivk9pl] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+/* /Pages/Login.razor.rz.scp.css */
+
+.login-body[b-eds96zwvj5] {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    height: calc(100vh - 150px);
+}
+
+.form-login[b-eds96zwvj5] {
+    width: 100%;
+    max-width: 330px;
+    padding: 45px;
+    margin: auto;
+    background: url('file:///C:\Users\User\source\repos\BikePartsInventoryRecord\BikePartsInventoryRecord\Image\background.jpg');
+}
+
+.form-login .form-floating:focus-within[b-eds96zwvj5] {
+    z-index: 2;
+}
+
+.form-login .username[b-eds96zwvj5] {
+    margin-bottom: 20px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: ;
+}
+
+.form-login .password[b-eds96zwvj5] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+/* /Shared/MainLayout.razor.rz.scp.css */
+.page[b-rdfbzsf1yd] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+main[b-rdfbzsf1yd] {
+    flex: 1;
+}
+
+.sidebar[b-rdfbzsf1yd] {
+    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+}
+
+.top-row[b-rdfbzsf1yd] {
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #d6d5d5;
+    justify-content: flex-end;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+}
+
+    .top-row[b-rdfbzsf1yd]  a, .top-row[b-rdfbzsf1yd]  .btn-link {
+        white-space: nowrap;
+        margin-left: 1.5rem;
+        text-decoration: none;
+    }
+
+    .top-row[b-rdfbzsf1yd]  a:hover, .top-row[b-rdfbzsf1yd]  .btn-link:hover {
+        text-decoration: underline;
+    }
+
+    .top-row[b-rdfbzsf1yd]  a:first-child {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+@media (max-width: 640.98px) {
+    .top-row:not(.auth)[b-rdfbzsf1yd] {
+        display: none;
+    }
+
+    .top-row.auth[b-rdfbzsf1yd] {
+        justify-content: space-between;
+    }
+
+    .top-row[b-rdfbzsf1yd]  a, .top-row[b-rdfbzsf1yd]  .btn-link {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 641px) {
+    .page[b-rdfbzsf1yd] {
+        flex-direction: row;
+    }
+
+    .sidebar[b-rdfbzsf1yd] {
+        width: 250px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+    .top-row[b-rdfbzsf1yd] {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    .top-row[b-rdfbzsf1yd], article[b-rdfbzsf1yd] {
+        padding-left: 2rem !important;
+        padding-right: 1.5rem !important;
+    }
+}
+/* /Shared/NavMenu.razor.rz.scp.css */
+.navbar-toggler[b-a8h7enjquu] {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.top-row[b-a8h7enjquu] {
+    height: 3.5rem;
+    background-color: rgb(194, 20, 20);
+}
+
+.navbar-brand[b-a8h7enjquu] {
+    font-size: 1.1rem;
+}
+
+.oi[b-a8h7enjquu] {
+    width: 2rem;
+    font-size: 1.1rem;
+    vertical-align: text-top;
+    top: -2px;
+}
+
+.nav-item[b-a8h7enjquu] {
+    font-size: 0.9rem;
+    padding-bottom: 0.5rem;
+}
+
+    .nav-item:first-of-type[b-a8h7enjquu] {
+        padding-top: 1rem;
+    }
+
+    .nav-item:last-of-type[b-a8h7enjquu] {
+        padding-bottom: 1rem;
+    }
+
+    .nav-item[b-a8h7enjquu]  a {
+        color: #c21414;
+        border-radius: 4px;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        line-height: 3rem;
+    }
+
+.nav-item[b-a8h7enjquu]  a.active {
+    background-color: rgba(255,255,255,0.25);
+    color: white;
+}
+
+.nav-item[b-a8h7enjquu]  a:hover {
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+}
+
+@media (min-width: 641px) {
+    .navbar-toggler[b-a8h7enjquu] {
+        display: none;
+    }
+
+    .collapse[b-a8h7enjquu] {
+        /* Never collapse the sidebar for wide screens */
+        display: block;
+    }
+}

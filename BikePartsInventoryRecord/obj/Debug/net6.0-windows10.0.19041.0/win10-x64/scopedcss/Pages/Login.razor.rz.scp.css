@@ -1,0 +1,32 @@
+
+.login-body[b-eds96zwvj5] {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    height: calc(100vh - 150px);
+}
+
+.form-login[b-eds96zwvj5] {
+    width: 100%;
+    max-width: 330px;
+    padding: 45px;
+    margin: auto;
+    
+}
+
+.form-login .form-floating:focus-within[b-eds96zwvj5] {
+    z-index: 2;
+}
+
+.form-login .username[b-eds96zwvj5] {
+    margin-bottom: 20px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: ;
+}
+
+.form-login .password[b-eds96zwvj5] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}

@@ -1,0 +1,62 @@
+﻿@page "/Data-Analytics"
+@using BikePartsInventoryRecord.Data
+@using ChartJs.Blazor.PieChart
+
+<h1>
+    Bike Parts Data Analysis
+</h1>
+<Chart Config="_config"></Chart>
+
+
+@code{
+    [CascadingParameter]
+    private GlobalState _globalState { get; set; }
+    private PieConfig _config;
+    private List<DataAnalysisDTO> _dataAnalysisDTO;
+    protected override void OnInitialized()
+    {
+        _dataAnalysisDTO = DataAnalysisS.DataAnalysisDTO(_globalState.CurrentUser.Id);
+        _config = new PieConfig
+            {
+                Options = new PieOptions
+                {
+                    Responsive = true,
+                    Title = new OptionsTitle
+                    {
+                        Display = true,
+                        Text = "Totals Item In Inventory"
+                    }
+                }
+            };
+
+        PieDataset<int> dataset = new PieDataset<int>();
+
+        List<int> itemArrray = new List<int>();
+        foreach (var color in _dataAnalysisDTO)
+        {
+            _config.Data.Labels.Add(color.TitleName);
+            itemArrray.Add(color.ValueCount);
+        }
+
+        dataset = new PieDataset<int>(itemArrray)
+            {
+                BackgroundColor = new[]
+                    {
+                    ColorUtil.ColorHexString(23, 214, 2),
+                    ColorUtil.ColorHexString(2, 103, 235),
+                    ColorUtil.ColorHexString(219, 9, 9),
+                    ColorUtil.ColorHexString(199, 247, 5),
+                    ColorUtil.ColorHexString(247, 45, 187),
+                    ColorUtil.ColorHexString(182, 219, 182),
+                    ColorUtil.ColorHexString(2, 103, 121),
+                    ColorUtil.ColorHexString(24, 103, 9),
+                    ColorUtil.ColorHexString(1, 219, 34),
+                    ColorUtil.ColorHexString(230, 219, 44)
+                }
+            };
+
+       
+
+        _config.Data.Datasets.Add(dataset);
+    }
+}

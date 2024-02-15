@@ -1,0 +1,1 @@
+C:\Users\User\OneDrive\Desktop\BikePartsInventoryRecord\BikePartsInventoryRecord\BikePartsInventoryRecord.csproj;x64

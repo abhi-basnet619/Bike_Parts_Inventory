@@ -1,0 +1,63 @@
+﻿@page "/horizontalGraph"
+@using BikePartsInventoryRecord.Data
+@using ChartJs.Blazor.BarChart
+
+<h1>
+    Bike Parts Data Analysis
+</h1>
+<Chart Config="_config"></Chart>
+
+
+@code {
+    [CascadingParameter]
+    private GlobalState _globalState { get; set; }
+    private BarConfig _config;
+    private List<DataAnalysisDTO> _dataAnalysisDTO;
+    protected override void OnInitialized()
+    {
+        _dataAnalysisDTO = DataAnalysisS.DataAnalysisDTO(_globalState.CurrentUser.Id);
+        _config = new BarConfig
+            {
+                Options = new BarOptions
+                {
+                    Responsive = true,
+                    Title = new OptionsTitle
+                    {
+                        Display = true,
+                        Text = "Totals Item In Inventory"
+                    }
+                }
+            };
+
+        BarDataset<int> dataset = new BarDataset<int>();
+
+        List<int> itemArrray = new List<int>();
+        foreach (var color in _dataAnalysisDTO)
+        {
+            _config.Data.Labels.Add(color.TitleName);
+            itemArrray.Add(color.ValueCount);
+        }
+
+        dataset = new BarDataset<int>(itemArrray)
+        {
+                BackgroundColor = new[]
+                        {
+                    ColorUtil.ColorHexString(2, 103, 235), 
+                    ColorUtil.ColorHexString(2, 103, 235), 
+                    ColorUtil.ColorHexString(2, 103, 235), 
+                    ColorUtil.ColorHexString(2, 103, 235), 
+                    ColorUtil.ColorHexString(2, 103, 235),
+                    ColorUtil.ColorHexString(2, 103, 235),
+                    ColorUtil.ColorHexString(2, 103, 235),
+                    ColorUtil.ColorHexString(2, 103, 235),
+                    ColorUtil.ColorHexString(2, 103, 235),
+                    ColorUtil.ColorHexString(2, 103, 235),
+                      ColorUtil.ColorHexString(2, 103, 235),
+                }
+        };
+
+
+
+        _config.Data.Datasets.Add(dataset);
+    }
+}
